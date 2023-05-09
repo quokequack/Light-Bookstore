@@ -6,7 +6,7 @@ import { useEffect } from "react";
 export default function Welcome() {
 
     useEffect(() => {
-        document.title = 'Bookstore | Bem-vindo!'
+        document.title = 'Light | Bem-vindo!'
     }, []);
 
     return(
@@ -17,7 +17,7 @@ export default function Welcome() {
                         <img className='light' src='..//img/luz.png' alt='light'/> 
                     </div>
                     <div className='title'>
-                        <h2>LIGHT Bookstore</h2>
+                        <h2>Light Bookstore</h2>
                     </div>
                     <div className='subtitle'>
                         <h5>Reserve seus livros na biblioteca mais incrível da cidade!</h5>
