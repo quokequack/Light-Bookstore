@@ -1,0 +1,54 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    border:0;
+}
+.welcome{
+    height:100vh;
+    background-color:black;
+    font-family:'Poppins';
+}
+.welcome-container{
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+}
+.light{
+    filter: drop-shadow(-3px 6px 27px #FFD600)
+}
+
+.title h2{
+    text-transform:uppercase;
+    font-weight:600;
+    color:#FFD600;
+}
+.subtitle{
+    color:#F7FF9A;
+}
+
+.options{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.options button{
+    width:20%;
+    margin-top:2%;
+    border-radius:0;
+    color:#FFD600;
+    text-transform:lowercase;
+    letter-spacing:5px;
+}
+.options .cadastro-btn{
+    background-color:#5C3434;
+}
+.options .login-btn{
+    background-color:#302424;
+}
+.options button:hover{
+    background-color:black;
+    color:#FFD600;
+    border:2px solid #FFD600;
+}
