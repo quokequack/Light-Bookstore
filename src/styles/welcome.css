@@ -37,9 +37,12 @@
     width:20%;
     margin-top:2%;
     border-radius:0;
-    color:#FFD600;
     text-transform:lowercase;
     letter-spacing:5px;
+}
+.options button .link-btn{
+    text-decoration:none;
+    color:#FFD600;
 }
 .options .cadastro-btn{
     background-color:#5C3434;

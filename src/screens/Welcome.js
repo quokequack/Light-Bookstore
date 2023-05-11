@@ -1,6 +1,7 @@
 import React from "react";
 import '../styles/welcome.css';
 import { useEffect } from "react";
+import { Link } from 'react-router-dom';
 
 
 export default function Welcome() {
@@ -25,8 +26,8 @@ export default function Welcome() {
                 </div>
                 <div className='welcome-body'>
                     <div className='options'>
-                        <button className='btn cadastro-btn'> Cadastre-se </button>
-                        <button className='btn login-btn'>Faça login</button>
+                        <button className='btn cadastro-btn'><Link className='link-btn' to='/cadastro'>Cadastre-se!</Link></button>
+                        <button className='btn login-btn'><Link className='link-btn' to='/login'>Entre!</Link></button>
                     </div>
                 </div>
             </div>
