@@ -1,0 +1,26 @@
+
+.header-app{
+    margin:0;
+    padding:0;
+    background-color:#302424;
+}
+.navbar-nav a, .navbar-nav #active-nav-item{
+    font-family:'Poppins', sans-serif;
+    color:#F7FF9A;
+    font-size:1em;
+}
+#navbrand{
+    font-family:'Poppins', sans-serif;
+    color:#F7FF9A;
+    font-weight:600;
+    font-size:1.3em; 
+}
+#navbrand:hover{
+    color:#F5E45F;
+}
+.navbar-nav a:hover, .navbar-nav #active-nav-item:hover, .navbar-brand:hover{
+    color:#F5E45F;
+}
+
+
+

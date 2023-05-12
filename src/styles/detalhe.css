@@ -1,0 +1,63 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+.detalhe{
+    height:100vh;
+    background-color:#8E8E8E;
+    font-family:'Poppins';
+}
+.detalhe-body{
+    display:flex;
+    flex-direction:column;
+}
+.book-title{
+    color:#F7FF9A;
+    font-size:1.5em;
+    margin-top:5%;
+    text-align:left;
+}
+.livro-footer{
+    display:flex;
+    justify-content:center;
+}
+.livro-footer .autor{
+    margin-right:3%;
+}
+.livro .label{
+    font-size:1.5em;
+    color:#302424;
+    font-weight:bold;
+    margin-top:5%;
+}
+.livro p{
+    color:#F7FF9A;
+}
+.detalhes-buttons{
+    margin-top:5%;
+}
+.detalhes-buttons button{
+    background-color:#302424;
+    border-radius:0;
+}
+.desc{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+#devolver-btn{
+    margin-left:2%;
+}
+.act-btn{
+    color:#F7FF9A;
+    font-size:1em;
+    text-decoration:none;
+}
+.detalhe-descricao{
+    width:50%;
+    text-align:justify;
+}

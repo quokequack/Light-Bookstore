@@ -14,7 +14,7 @@
     display:flex;
     left:3%;
 }
-.img img{
+.img .light-pic{
     width:80%;
     filter: drop-shadow(-3px 6px 27px #FFD600)
 }

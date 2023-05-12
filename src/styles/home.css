@@ -1,0 +1,78 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+.homepage{
+    height:100vh;
+    background-color:#5C3434;
+    font-family:'Poppins';
+    display:flex;
+}
+
+.home-body{
+    margin-top:2%;
+}
+
+.saying{
+    font-size:1.2em;
+    font-weight:100;
+    font-style:italic;
+    color:#F7FF9A;
+    text-align:right;
+}
+
+.topic{
+    text-align:left;
+    color:#F7FF9A;
+    margin-top:2%;
+}
+.books{
+    margin-top:2%;
+    display:flex;
+}
+#card{
+    width:15em;
+    height:200px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:#302424;
+    border:none;
+    margin-right:2%;
+}
+.card img{
+    width:60%;
+}
+.card-body{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+.card .card-title{
+    color:#F7FF9A;
+    text-align:center;
+}
+#btn-book{
+    background-color:#5C3434;
+    border-radius:0;
+    position:absolute;
+    bottom:0;
+
+}
+.link-btn-book{
+    color:#F7FF9A;
+    text-decoration:none;
+}
+#btn-book:hover{
+    color:#000;
+    background-color:#302424;
+}
+.link-btn-book:hover{
+    color:#000;
+    text-decoration:none;
+}
+
+
