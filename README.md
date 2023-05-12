@@ -2,9 +2,9 @@
 
 ### Descrição do projeto:
 Um site de livraria feito com React.js, Firestore e Bootstrap que permite os usuários de uma determinada livraria reservarem os livros que desejam ler e ir buscar posteriormente.
-#### Domínio: https://light-bookstore.vercel.app/
-#### Repositório no Github: https://github.com/quokequack/Light-Bookstore
-#### Página de planejamento no Notion: https://www.notion.so/Light-Bookstore-ff939fdc5d3d402eb66d2ab04f141568?pvs=4
+##### Domínio: https://light-bookstore.vercel.app/
+##### Repositório no Github: https://github.com/quokequack/Light-Bookstore
+##### Página de planejamento no Notion: https://www.notion.so/Light-Bookstore-ff939fdc5d3d402eb66d2ab04f141568?pvs=4
 
 ### Programadores:
 	Maria Luísa Alaquoke Ferreira dos Santos
