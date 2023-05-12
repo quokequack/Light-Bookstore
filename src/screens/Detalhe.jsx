@@ -7,6 +7,10 @@ import { Link } from "react-router-dom";
 import '../styles/detalhe.css';
 
 export default function Detalhe() {
+    useEffect(() => {
+        document.title = 'Light | Detalhes do livro!'
+    }, []);
+
     const { id } = useParams();
     const [livro, setLivro] = useState(null);
 
@@ -59,8 +63,8 @@ export default function Detalhe() {
                                 </div>
                             </div>
                             <div className='detalhes-buttons'>
-                                <button className='btn actions-btn'><Link className='act-btn' to=''>Reservar</Link></button>
-                                <button id='devolver-btn' className='btn actions-btn'><Link className='act-btn' to=''>Devolver</Link></button>
+                                <button className='btn actions-btn'><Link className='act-btn' to=''>Reservar!</Link></button>
+                                <button id='devolver-btn' className='btn actions-btn'><Link className='act-btn' to=''>Devolver!</Link></button>
                             </div>
                         </div>
                     </div>

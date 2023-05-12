@@ -14,17 +14,7 @@
     display:flex;
     left:3%;
 }
-.img .light-pic{
-    width:80%;
-    filter: drop-shadow(-3px 6px 27px #FFD600)
-}
-.header-title h1{
-    color:#F7FF9A;
-    margin-left:-30%;
-    width:20%;
-    margin-top:15%;
-    font-weight:bold;
-}
+
 .cadastro-body{
     display:flex;
 }
@@ -35,34 +25,7 @@
     -moz-box-shadow: -60px 21px 0px 10px rgba(92,52,52,1);
     box-shadow: -60px 21px 0px 10px rgba(92,52,52,1);
 }
-.pics p{
-    color:#F7FF9A;
-    font-style:italic;
-}
-.form{
-    margin-top:12%;
-    margin-left:5%;
-    display:inline;
-}
-.form form{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin-top:5%;
-}
-.form form label, form input{
-    margin-top:5%;
-}
-.form input{
-    border-radius:0;
-}
-.form label{
-    color:#F7FF9A;
-}
-.form h2{
-    font-size:1.8em;
-    color:#F7FF9A;
-}
+
 .cadastro-buttons{
     display:flex;
     flex-direction:column;
@@ -76,21 +39,16 @@
     text-decoration:none;
     color:#F7FF9A;
 }
-.link-btn{
-    text-decoration:none;
-    color:#F7FF9A;
-}
+
 .cadastro-buttons button:hover{
     background-color:black;
     border:2px solid #F7FF9A;
     color:#F7FF9A;
 }
-.link-btn:hover{
-    color:#F7FF9A;
-}
+
 .cadastro-buttons label {
     margin-top:-5%;
 }
-.btn-login{
+.btn-cadastro{
     margin-top:3%;
 }

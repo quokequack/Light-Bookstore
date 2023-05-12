@@ -3,6 +3,7 @@ import Welcome from "../screens/Welcome";
 import Cadastro from "../screens/Cadastro";
 import Home from "../screens/Home";
 import Detalhe from "../screens/Detalhe";
+import Login from "../screens/Login";
 
 
 export default function Rotas() {
@@ -14,6 +15,7 @@ export default function Rotas() {
                     <Route path='/cadastro' element={<Cadastro />} />
                     <Route path='/home' element={<Home />} />
                     <Route path='/detalhes/:id' element={<Detalhe />}/>
+                    <Route path='/login' element={<Login />}/>
                 </Routes>
             </BrowserRouter>
         </div>

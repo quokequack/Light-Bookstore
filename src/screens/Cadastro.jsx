@@ -34,7 +34,7 @@ export default function Cadastro() {
 
             window.location.href = '/home';
         }catch(error){
-            if(error.code == 'auth/weak-password'){
+            if(error.code === 'auth/weak-password'){
                 setShowValue(true);
                 setErrorText('Sua senha deve ser mais forte!')
                 return;
@@ -55,7 +55,7 @@ export default function Cadastro() {
             <div className='container cadastro-container'>
                 <div className='cadastro-header'>
                     <div className='img'>
-                        <img src='../img/luz.png' alt='luz' />
+                        <img className='light' src='../img/luz.png' alt='luz' />
                     </div>
                     <div className='header-title'>
                         <h1>light BOOKSTORE</h1>
