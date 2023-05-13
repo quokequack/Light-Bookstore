@@ -33,6 +33,7 @@ export default function Cadastro() {
             });
 
             window.location.href = '/home';
+            
         }catch(error){
             if(error.code === 'auth/weak-password'){
                 setShowValue(true);
@@ -75,15 +76,15 @@ export default function Cadastro() {
                             <div className='col-lg-8'>
                                 <div className='form-group'>
                                     {showValue ? <p>{errorText}</p> : null}
-                                    <label>Nome</label>
-                                    <input className='form-control' onChange={(e) => setNome(e.target.value)} type='text' value={nome} />
-                                    <label>Email</label>
-                                    <input className='form-control' onChange={(e) => setEmail(e.target.value)} type='email' value={email} />
-                                    <label>Senha</label>
-                                    <input className='form-control' onChange={(e) => setSenha(e.target.value)} type='password' value={senha} />
+                                    <label htmlFor='nome'>Nome</label>
+                                    <input name='nome' id='nome' className='form-control' onChange={(e) => setNome(e.target.value)} type='text' value={nome} />
+                                    <label htmlFor='email'>Email</label>
+                                    <input name='email' id='email' className='form-control' onChange={(e) => setEmail(e.target.value)} type='email' value={email} />
+                                    <label htmlFor='senha'>Senha</label>
+                                    <input name='senha' id='senha' className='form-control' onChange={(e) => setSenha(e.target.value)} type='password' value={senha} />
                                     <div className='container cadastro-buttons'>
                                         <button type='submit' className='btn btn-submit'>Crie minha conta! sZ </button>
-                                        <label> Já tem uma conta? </label>
+                                        <p> Já tem uma conta? </p>
                                         <button className='btn btn-login'><Link className='link-btn' to='/login'>Quero entraaaar!</Link></button>
                                     </div>
                                 </div>

@@ -25,7 +25,7 @@ export default function Login() {
             console.log("Usuário logado:", usuario);
         } catch{
             setShowValue(true);
-            setErrorText('Algo deu errado, tente novamente!');
+            setErrorText('Erro!');
             return;
         }
     }
@@ -56,13 +56,13 @@ export default function Login() {
                             <div className='col-lg-10'>
                                 <div className='form-group'>
                                     {showValue ? <p>{errorText}</p> : null}
-                                    <label>Email</label>
-                                    <input className='form-control' onChange={(e) => setEmail(e.target.value)} type='email' value={email} />
-                                    <label>Senha</label>
-                                    <input className='form-control' onChange={(e) => setSenha(e.target.value)} type='password' value={senha} />
+                                    <label htmlFor='email'>Email</label>
+                                    <input id='email' name='email' className='form-control' onChange={(e) => setEmail(e.target.value)} type='email' value={email} />
+                                    <label htmlFor='senha'>Senha</label>
+                                    <input id='senha' name='senha' className='form-control' onChange={(e) => setSenha(e.target.value)} type='password' value={senha} />
                                     <div className='container login-buttons'>
                                         <button type='submit' className='btn btn-submit'>Entrar! sZ </button>
-                                        <label> Ainda não tem uma conta?! </label>
+                                        <p> Ainda não tem uma conta?! </p>
                                         <button className='btn btn-cadastro'><Link className='link-btn' to='/cadastro'>Criar contaaaaaa!</Link></button>
                                     </div>
                                 </div>
