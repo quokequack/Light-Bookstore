@@ -1,0 +1,42 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    border:0;
+}
+
+.meus-reservados{
+    background-color:black;
+    height:100vh;
+    display:flex;
+}
+.reservados-body{
+    margin-top:2%;
+}
+#btn-book-reserved{
+    background-color:#000;
+    border-radius:0;
+    position:absolute;
+    bottom:0;
+
+}
+.reservados-topic{
+    font-family:'Poppins';
+    text-align:left;
+    color:#F7FF9A;
+    margin-top:2%;;
+}
+.link-btn-book-reserved{
+    color:#F7FF9A;
+    text-decoration:none;
+}
+#btn-book-reserved:hover{
+    color:#000;
+    background-color:#302424;
+}
+.link-btn-book-reserved:hover{
+    color:#000;
+    text-decoration:none;
+}
+.card-title{
+    font-family:'Poppins';
+}

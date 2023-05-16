@@ -7,7 +7,6 @@
 .homepage{
     height:100vh;
     background-color:#5C3434;
-    font-family:'Poppins';
     display:flex;
 }
 
@@ -27,6 +26,7 @@
     text-align:left;
     color:#F7FF9A;
     margin-top:2%;
+    font-family:'Poppins';
 }
 .books{
     margin-top:2%;
@@ -54,6 +54,7 @@
 .card .card-title{
     color:#F7FF9A;
     text-align:center;
+    font-family:'Poppins';
 }
 #btn-book{
     background-color:#5C3434;

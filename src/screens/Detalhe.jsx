@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { firebaseApp } from "../firebase/FirebaseConnection";
-import { collection, getDoc, doc, getFirestore } from "firebase/firestore";
+import { collection, getDoc, doc, getFirestore, addDoc } from "firebase/firestore";
 import Header from "../components/Header";
 import { Link } from "react-router-dom";
 import '../styles/detalhe.css';
@@ -11,8 +11,9 @@ export default function Detalhe() {
         document.title = 'Light | Detalhes do livro!'
     }, []);
 
-    const { id } = useParams();
+    const { id, idUsuario} = useParams();
     const [livro, setLivro] = useState(null);
+    const [reservas, setReservas] = useState([]);
 
     const db = getFirestore(firebaseApp);
 
@@ -40,6 +41,23 @@ export default function Detalhe() {
         return <div>Carregando...</div>;
     }
 
+    const reservarLivro = async () => {
+
+        try {
+            const reserva = {
+                idLivro: id,
+                idUsuario: idUsuario,
+            };
+            
+            const reservasCollection = collection(db, 'reservas');
+            await addDoc(reservasCollection, reserva);
+            setReservas([...reservas, reserva]);
+            alert("Livro reservado com sucesso!");
+        } catch (error) {
+            console.log('Algo deu errado!' + error);
+        };
+    };
+
     return (
         <>
             <Header />
@@ -63,7 +81,7 @@ export default function Detalhe() {
                                 </div>
                             </div>
                             <div className='detalhes-buttons'>
-                                <button className='btn actions-btn'><Link className='act-btn' to=''>Reservar!</Link></button>
+                                <button onClick={reservarLivro} className='btn actions-btn'><Link className='act-btn' to=''>Reservar!</Link></button>
                                 <button id='devolver-btn' className='btn actions-btn'><Link className='act-btn' to=''>Devolver!</Link></button>
                             </div>
                         </div>

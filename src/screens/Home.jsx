@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { firebaseApp } from '../firebase/FirebaseConnection';
 import { getFirestore, collection, getDocs } from "firebase/firestore";
@@ -11,18 +11,11 @@ export default function Home() {
         document.title = 'Light | Página inicial';
     }, []);
 
-    const [nome, setNome] = useState("");
-    const [autor, setAutor] = useState("");
-    const [genero, setGenero] = useState("");
-    const [descricao, setDescricao] = useState("");
-    const [capa, setCapa] = useState("");
     const [livros, setLivros] = useState([]);
 
     const db = getFirestore(firebaseApp);
-    const usuarios = collection(db, 'usuarios');
     const livrosCollection = collection(db, 'livros');
-
-    
+    const { idUsuario } = useParams();
 
     useEffect(() => {
         const getLivros = async () => {
@@ -30,7 +23,7 @@ export default function Home() {
             setLivros(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
         };
         getLivros();
-    }, []);
+    });
 
     return (
         <>
@@ -47,7 +40,7 @@ export default function Home() {
                                         {/*<img src="../img/colecionador.jpg" className="card-img-top" alt="..." />*/}
                                         <div className="card-body">
                                             <h5 className="card-title">{livro.nome}</h5>
-                                            <button id='btn-book' className="btn btn-book"><Link className='link-btn-book' to={`/detalhes/${livro.id}`}>Ver livro!</Link></button>
+                                            <button id='btn-book' className="btn btn-book"><Link className='link-btn-book' to={`/detalhes/${livro.id}/${idUsuario}`}>Ver livro!</Link></button>
                                        </div>
                                    </div>
                                 )

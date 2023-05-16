@@ -21,7 +21,8 @@ export default function Login() {
         try {
             const userCredential = await signInWithEmailAndPassword(auth, email, senha);
             const usuario = userCredential.user;
-            window.location.href = '/home';
+            const idUsuario = usuario.uid;
+            window.location.href = `/home/${idUsuario}`;
             console.log("Usuário logado:", usuario);
         } catch{
             setShowValue(true);
