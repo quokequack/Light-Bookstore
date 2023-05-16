@@ -15,7 +15,6 @@ Um site de livraria feito com React.js, Firestore e Bootstrap que permite os usu
 
    Cadastrar livros  → nova funcionalidade;
    Reservar livros  → nova funcionalidade;
-   Cancelar reservas  → nova funcionalidade;
    Excluir livros → nova funcionalidade;;
    Atualizar livros → nova funcionalidade;
    
