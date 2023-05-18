@@ -50,7 +50,7 @@ export default function Login() {
                             <img className='light-pic' src='../img/heath.jpg' alt='Heath Ledger' />
                             <p>Seus livros estão com saudade...</p>
                         </div>
-                    </div>
+                    </div> 
                     <div className='form'>
                         <h2>Bem-vindo de volta, leitor!</h2>
                         <form method='post' onSubmit={fazerLogin}>

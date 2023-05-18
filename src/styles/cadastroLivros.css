@@ -1,0 +1,39 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    border:0;
+}
+
+.cadastroLivro{
+    height:100vh;
+    background-color:#302424;
+    font-family:'Poppins';
+}
+
+.form-livro{
+    margin-top:5%;
+    display:inline;
+}
+.form-livro form{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:5%;
+}
+.form-livro form label, form input{
+    margin-top:5%;
+}
+.form-livro input{
+    border-radius:0;
+}
+.form-livro label{
+    color:#F7FF9A;
+}
+.form-livro h2{
+    text-align:left;
+    font-size:1.8em;
+    color:#F7FF9A;
+}
+#livro-descricao{
+    height:100px;
+}

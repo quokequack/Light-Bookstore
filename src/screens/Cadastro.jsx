@@ -32,7 +32,7 @@ export default function Cadastro() {
                 senha: senha
             });
 
-            window.location.href = '/home';
+            window.location.href = `/home/${usuario.uid}`;
             
         }catch(error){
             if(error.code === 'auth/weak-password'){

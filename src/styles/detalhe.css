@@ -42,6 +42,19 @@
     background-color:#302424;
     border-radius:0;
 }
+.detalhe-top-header{
+    text-align:left;
+}
+.detalhe-top-header button{
+    color:#302424;
+    background-color:#F7FF9A;
+    margin-right:2%;
+    border-radius:0;
+}
+.detalhe-top-header button .link{
+    color:#302424;
+    text-decoration:none;
+}
 .desc{
     display:flex;
     flex-direction:column;
