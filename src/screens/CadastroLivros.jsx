@@ -1,6 +1,9 @@
 import { useEffect } from "react";
 import Header from '../components/Header';
 import '../styles/cadastroLivros.css';
+import { getFirestore, collection, addDoc } from "firebase/firestore";
+import { firebaseApp } from "../firebase/FirebaseConnection";
+
 
 
 
@@ -9,6 +12,28 @@ export default function CadastroLivros() {
     useEffect(() => {
         document.title = 'Light Bookstore | Cadastre um livro!';
     }, []);
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+    
+        const form = event.target;
+        const nome = form["livro-nome"].value;
+        const autor = form["livro-autor"].value;
+        const genero = form["livro-genero"].value;
+        const descricao = form["livro-descricao"].value;
+    
+        const db = getFirestore(firebaseApp);
+        const livroCollection = collection(db, "livros");
+    
+        await addDoc(livroCollection, {
+          nome: nome,
+          autor: autor,
+          genero: genero,
+          descricao: descricao,
+        });
+    
+        // Limpar os campos do formulário após o cadastro
+        form.reset();
+      };
 
     return (
         <>
@@ -18,7 +43,7 @@ export default function CadastroLivros() {
                     <div className='form-livro'>
                         <h2>Cadastre um livro!</h2>
                         <div className='col-md-14'>
-                        <form method='post'>
+                        <form method='post' onSubmit={handleSubmit}>
     <div className='form-group'>
         <label htmlFor='livro-nome'>Nome do livro</label>
         <input className='form-control' type='text' name='livro-nome' id='livro-nome' />
