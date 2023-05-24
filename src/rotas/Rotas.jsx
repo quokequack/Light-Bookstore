@@ -7,7 +7,6 @@ import Login from "../screens/Login";
 import MeusReservados from "../screens/MeusReservados";
 import CadastroLivros from "../screens/CadastroLivros";
 import AtualizaLivros from "../screens/AtualizaLivros";
-test
 
 export default function Rotas() {
     return (
@@ -22,7 +21,7 @@ export default function Rotas() {
                     <Route path='/meus-reservados/:idUsuario'  element={<MeusReservados />}/>
                     <Route path='/cadastro-livro' element={<CadastroLivros />}/>
                     <Route path='/atualiza-livro/:id' element={<AtualizaLivros />}/>
-                  /***dfaslj***/
+            
                 </Routes>
             </BrowserRouter>
         </div>
