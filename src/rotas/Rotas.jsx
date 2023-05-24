@@ -24,6 +24,6 @@ export default function Rotas() {
                     <Route path='/atualiza-livro/:id' element={<AtualizaLivros />}/>
                 </Routes>
             </BrowserRouter>
-        </div>c
+        </div>
     )
 }
