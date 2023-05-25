@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { firebaseApp } from "../firebase/FirebaseConnection";
+import { query, where, getDocs } from "firebase/firestore";
 import { collection, getDoc, doc, getFirestore, addDoc, deleteDoc} from "firebase/firestore";
 import Header from "../components/Header";
 import { Link } from "react-router-dom";
@@ -14,6 +15,7 @@ export default function Detalhe() {
     const {id, idUsuario} = useParams();
     const [livro, setLivro] = useState(null);
     const [reservas, setReservas] = useState([]);
+    const [devolucoes, setDevolucoes] = useState([]);
     const [usuario, setUsuario] = useState(null);
     const [ehAdm, setEhAdm] = useState(false);
 
@@ -87,6 +89,37 @@ export default function Detalhe() {
             console.log('Algo deu errado!' + error);
         };
     };
+    const devolverLivro = async () => {
+        try {
+          const devolucao = {
+            idLivro: id,
+            idUsuario: idUsuario,
+          };
+    
+          const devolucoesCollection = collection(db, "devolucoes");
+          await addDoc(devolucoesCollection, devolucao);
+          alert("Livro devolvido com sucesso!");
+
+          try {
+            const reservaRef = query(collection(db, "reservas"), where("idLivro", "==", id), where("idUsuario", "==", idUsuario));
+            const reservaSnapshot = await getDocs(reservaRef);
+        
+            if (reservaSnapshot.empty) {
+              console.log("Reserva não encontrada!");
+              return;
+            }
+        
+            const reservaDoc = reservaSnapshot.docs[0];
+            await deleteDoc(reservaDoc.ref);
+            alert("Livro excluido da colecao reservas com sucesso!");
+          } catch (error) {
+            console.log("Erro ao excluir o livro da colecao reservas!", error);
+          }
+        }catch (error) {
+            console.log("Erro ao devolver o livro!", error);
+          }
+      };
+
 
     const excluirLivro = async () => {
         try {
@@ -134,7 +167,7 @@ export default function Detalhe() {
                             </div>
                             <div className='detalhes-buttons'>
                                 <button onClick={reservarLivro} className='btn actions-btn'><Link className='act-btn' to=''>Reservar!</Link></button>
-                                <button id='devolver-btn' className='btn actions-btn'><Link className='act-btn' to=''>Devolver!</Link></button>
+                                <button onClick={devolverLivro} id='devolver-btn' className='btn actions-btn'><Link className='act-btn' to=''>Devolver!</Link></button>
                             </div>
                         </div>
                     </div>
