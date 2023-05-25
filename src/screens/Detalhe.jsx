@@ -141,7 +141,7 @@ export default function Detalhe() {
                     <div className='detalhe-body'>
                         <div className='detalhe-top-header'>
                             <h2 className='book-title'>{livro.nome}</h2>
-                            {ehAdm == true &&
+                            {ehAdm === true &&
                                <>
                                     <div className='top-buttons'>
                                         <button className='btn excluirLivro' onClick={excluirLivro}>Excluir</button>
