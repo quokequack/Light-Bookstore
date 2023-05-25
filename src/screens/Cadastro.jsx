@@ -75,7 +75,7 @@ export default function Cadastro() {
                         <form method='post' onSubmit={cadastrar}>
                             <div className='col-lg-8'>
                                 <div className='form-group'>
-                                    {showValue ? <p>{errorText}</p> : null}
+                                    {showValue ? <p className='msg-error'>{errorText}</p> : null}
                                     <label htmlFor='nome'>Nome</label>
                                     <input name='nome' id='nome' className='form-control' onChange={(e) => setNome(e.target.value)} type='text' value={nome} />
                                     <label htmlFor='email'>Email</label>
