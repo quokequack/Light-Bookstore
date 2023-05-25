@@ -6,7 +6,7 @@
 
 .login{
     height:110vh;
-    background-color:#5C3434;
+    background-image:linear-gradient(to bottom, #755BB2, #FF7C7C);
     font-family:'Poppins';
 }
 .login-header{
@@ -88,8 +88,8 @@
 .link-btn:hover{
     color:#F7FF9A;
 }
-.login-buttons label {
-    margin-top:-5%;
+.login-buttons p {
+    margin-top:5%;
 }
 .btn-login{
     margin-top:3%;

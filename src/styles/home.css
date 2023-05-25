@@ -6,7 +6,7 @@
 
 .homepage{
     height:100vh;
-    background-color:#5C3434;
+    background-color:#FF7C7C;
     display:flex;
 }
 
@@ -38,7 +38,7 @@
     display:flex;
     justify-content:center;
     align-items:center;
-    background-color:#302424;
+    background-color:#7d6897;
     border:none;
     margin-right:2%;
 }
@@ -57,7 +57,7 @@
     font-family:'Poppins';
 }
 #btn-book{
-    background-color:#5C3434;
+    background-color:#433850;
     border-radius:0;
     position:absolute;
     bottom:0;

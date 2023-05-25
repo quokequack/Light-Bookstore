@@ -6,7 +6,7 @@
 
 .detalhe{
     height:100vh;
-    background-color:#8E8E8E;
+    background-image:linear-gradient(to bottom, #5cd9e9, #FFA9A9);
     font-family:'Poppins';
 }
 .detalhe-body{

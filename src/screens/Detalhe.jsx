@@ -111,7 +111,7 @@ export default function Detalhe() {
         
             const reservaDoc = reservaSnapshot.docs[0];
             await deleteDoc(reservaDoc.ref);
-            alert("Livro excluido da colecao reservas com sucesso!");
+            
           } catch (error) {
             console.log("Erro ao excluir o livro da colecao reservas!", error);
           }
@@ -145,7 +145,7 @@ export default function Detalhe() {
                                <>
                                     <div className='top-buttons'>
                                         <button className='btn excluirLivro' onClick={excluirLivro}>Excluir</button>
-                                        <button className='btn atualizaLivro'><Link className='link' to={`/atualiza-livro/${id}`}>Atualizar</Link></button>
+                                        <button className='btn atualizaLivro'><Link className='link' to={`/atualiza-livro/${id}/${idUsuario}`}>Atualizar</Link></button>
                                     </div>
                                 </>
                             }

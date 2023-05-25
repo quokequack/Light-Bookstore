@@ -62,9 +62,9 @@ export default function Login() {
                                     <label htmlFor='senha'>Senha</label>
                                     <input id='senha' name='senha' className='form-control' onChange={(e) => setSenha(e.target.value)} type='password' value={senha} />
                                     <div className='container login-buttons'>
-                                        <button type='submit' className='btn btn-submit'>Entrar! sZ </button>
+                                        <button type='submit' className='btn btn-submit'>Entrar!</button>
                                         <p> Ainda não tem uma conta?! </p>
-                                        <button className='btn btn-cadastro'><Link className='link-btn' to='/cadastro'>Criar contaaaaaa!</Link></button>
+                                        <button className='btn btn-cadastro'><Link className='link-btn' to='/cadastro'>Criar conta!</Link></button>
                                     </div>
                                 </div>
                             </div>

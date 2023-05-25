@@ -2,7 +2,7 @@
 .header-app{
     margin:0;
     padding:0;
-    background-color:#302424;
+    background-color:#000;
 }
 .navbar-nav a, .navbar-nav #active-nav-item{
     font-family:'Poppins', sans-serif;

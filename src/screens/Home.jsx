@@ -41,8 +41,8 @@ export default function Home() {
                                         <div className="card-body">
                                             <h5 className="card-title">{livro.nome}</h5>
                                             <button id='btn-book' className="btn btn-book"><Link className='link-btn-book' to={`/detalhes/${livro.id}/${idUsuario}`}>Ver livro!</Link></button>
-                                       </div>
-                                   </div>
+                                        </div>
+                                    </div>
                                 )
                             })}
                         </div>

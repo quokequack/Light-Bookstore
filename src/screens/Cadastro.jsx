@@ -83,9 +83,9 @@ export default function Cadastro() {
                                     <label htmlFor='senha'>Senha</label>
                                     <input name='senha' id='senha' className='form-control' onChange={(e) => setSenha(e.target.value)} type='password' value={senha} />
                                     <div className='container cadastro-buttons'>
-                                        <button type='submit' className='btn btn-submit'>Crie minha conta! sZ </button>
+                                        <button type='submit' className='btn btn-submit'>Crie minha conta!</button>
                                         <p> Já tem uma conta? </p>
-                                        <button className='btn btn-login'><Link className='link-btn' to='/login'>Quero entraaaar!</Link></button>
+                                        <button className='btn btn-login'><Link className='link-btn' to='/login'>Quero entrar!</Link></button>
                                     </div>
                                 </div>
                             </div>
