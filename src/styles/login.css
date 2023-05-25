@@ -5,7 +5,7 @@
 }
 
 .login{
-    height:110vh;
+    height:100vh;
     background-image:linear-gradient(to bottom, #755BB2, #FF7C7C);
     font-family:'Poppins';
 }
@@ -22,7 +22,7 @@
     color:#F7FF9A;
     margin-left:-30%;
     width:20%;
-    margin-top:15%;
+    margin-top:10%;
     font-weight:bold;
 }
 .login-body{

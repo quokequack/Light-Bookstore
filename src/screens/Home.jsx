@@ -37,7 +37,7 @@ export default function Home() {
                             {livros.map(livro => {
                                 return (
                                     <div id='card' className="card">
-                                        {/*<img src="../img/colecionador.jpg" className="card-img-top" alt="..." />*/}
+                                        <img src={livro.capaUrl} className="card-img-top" alt="Capa do livro" />
                                         <div className="card-body">
                                             <h5 className="card-title">{livro.nome}</h5>
                                             <button id='btn-book' className="btn btn-book"><Link className='link-btn-book' to={`/detalhes/${livro.id}/${idUsuario}`}>Ver livro!</Link></button>

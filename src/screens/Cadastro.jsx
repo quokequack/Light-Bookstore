@@ -72,7 +72,7 @@ export default function Cadastro() {
                     </div>
                     <div className='form'>
                         <h2>Bem-vindo, novo leitor! Cadastre-se e reserve seus livros!</h2>
-                        <form method='post' onSubmit={cadastrar}>
+                        <form id='form' method='post' onSubmit={cadastrar}>
                             <div className='col-lg-8'>
                                 <div className='form-group'>
                                     {showValue ? <p className='msg-error'>{errorText}</p> : null}
@@ -85,7 +85,7 @@ export default function Cadastro() {
                                     <div className='container cadastro-buttons'>
                                         <button type='submit' className='btn btn-submit'>Crie minha conta!</button>
                                         <p> Já tem uma conta? </p>
-                                        <button className='btn btn-login'><Link className='link-btn' to='/login'>Quero entrar!</Link></button>
+                                        <button id='btn-login' className='btn btn-login'><Link className='link-btn' to='/login'>Quero entrar!</Link></button>
                                     </div>
                                 </div>
                             </div>

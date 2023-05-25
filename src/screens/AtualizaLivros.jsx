@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Header from "../components/Header";
 import { getFirestore, doc, updateDoc, getDoc } from "firebase/firestore";
 import { firebaseApp } from "../firebase/FirebaseConnection";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 export default function AtualizaLivros() {
     const { id } = useParams();
@@ -13,7 +14,7 @@ export default function AtualizaLivros() {
         carregarLivro();
     }, []);
 
-    const {idUsuario} = useParams();
+    const { idUsuario } = useParams();
     const carregarLivro = async () => {
         const db = getFirestore(firebaseApp);
         const livroRef = doc(db, "livros", id);
@@ -39,6 +40,14 @@ export default function AtualizaLivros() {
         const autor = form["livro-autor"].value;
         const genero = form["livro-genero"].value;
         const descricao = form["livro-descricao"].value;
+        const capaLivro = form["livro-capa"].files[0];
+
+        const storage = getStorage(firebaseApp);
+
+        const storageRef = ref(storage, `livros/${capaLivro.name}`);
+
+        await uploadBytes(storageRef, capaLivro);
+        const capaUrl = await getDownloadURL(storageRef);
 
         const db = getFirestore(firebaseApp);
         const livroRef = doc(db, "livros", id);
@@ -49,6 +58,7 @@ export default function AtualizaLivros() {
                 autor: autor,
                 genero: genero,
                 descricao: descricao,
+                capaUrl: capaUrl,
             });
             alert("Livro atualizado com sucesso!");
             window.location.href = `/home/${idUsuario}`;
@@ -69,6 +79,15 @@ export default function AtualizaLivros() {
                             <div className="col-md-6">
                                 <form method="post" onSubmit={handleSubmit}>
                                     <div className="form-group">
+
+                                        <label htmlFor="livro-capa">Capa do livro</label>
+                                        <input
+                                            className="form-control"
+                                            type="file"
+                                            name="livro-capa"
+                                            id="livro-capa"
+                                        />
+
                                         <label htmlFor="livro-nome">Nome do livro</label>
                                         <input
                                             className="form-control"

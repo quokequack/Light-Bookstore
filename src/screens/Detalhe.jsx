@@ -51,7 +51,7 @@ export default function Detalhe() {
                     const usuarioData = usuarioDoc.data();
                     setUsuario(usuarioData);
     
-                    if (usuarioData.nome == 'Admin'){
+                    if (usuarioData.nome === 'Admin'){
                         setEhAdm(true);
                         console.log('Esse usuário é um administrador!')
                     } else {

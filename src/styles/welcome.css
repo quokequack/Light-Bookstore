@@ -44,14 +44,11 @@
     text-decoration:none;
     color:#FFD600;
 }
-.options .cadastro-btn{
-    background-color:#5C3434;
-}
-.options .login-btn{
-    background-color:#FF7C7C;
-}
-.options button:hover{
-    background-color:black;
+.options .cadastro-btn, .options .login-btn{
+    background-color:#000;
     color:#FFD600;
     border:2px solid #FFD600;
+}
+.options button:hover{
+    background-color:#814EFF;
 }

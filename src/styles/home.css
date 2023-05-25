@@ -29,7 +29,7 @@
     font-family:'Poppins';
 }
 .books{
-    margin-top:2%;
+    margin-top:6%;
     display:flex;
 }
 #card{
@@ -38,7 +38,7 @@
     display:flex;
     justify-content:center;
     align-items:center;
-    background-color:#7d6897;
+    background-color:#FF7C7C;
     border:none;
     margin-right:2%;
 }
@@ -59,9 +59,11 @@
 #btn-book{
     background-color:#433850;
     border-radius:0;
-    position:absolute;
     bottom:0;
 
+}
+.card-img-top{
+    box-shadow: 15px 10px 19px 0px rgba(0,0,0,0.1);
 }
 .link-btn-book{
     color:#F7FF9A;

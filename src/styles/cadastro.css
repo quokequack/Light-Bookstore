@@ -5,7 +5,7 @@
 }
 
 .cadastro{
-    height:110vh;
+    height:100vh;
     background-image:linear-gradient(to top, #755BB2, #FF7C7C);
     font-family:'Poppins';
 }
@@ -19,7 +19,7 @@
     display:flex;
 }
 .cadastro-body .pics .pic img{
-    margin-top:30%;
+    margin-top:22%;
     width:100%;
     -webkit-box-shadow: -60px 21px 0px 10px #000;
     -moz-box-shadow: -60px 21px 0px 10px #000;
@@ -31,7 +31,7 @@
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    margin-top:4%;
+    margin-top:3%;
 }
 .cadastro-buttons button{
     background-color:#000;
@@ -47,9 +47,18 @@
 }
 
 .cadastro-buttons p {
-    margin-top:5%;
+    margin-top:3%;
+}
+.header-title{
+    margin-top:-3%;
 }
 .btn-cadastro{
+    margin-top:2%;
+}
+#btn-login{
+    margin-top:-3%;
+}
+#form{
     margin-top:2%;
 }
 .pic p{

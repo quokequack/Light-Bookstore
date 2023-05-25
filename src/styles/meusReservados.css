@@ -15,15 +15,16 @@
 #btn-book-reserved{
     background-color:#000;
     border-radius:0;
-    position:absolute;
     bottom:0;
-
+}
+.books{
+    margin-top:7%;
 }
 .reservados-topic{
     font-family:'Poppins';
     text-align:left;
     color:#F7FF9A;
-    margin-top:2%;;
+    margin-top:2%;
 }
 .link-btn-book-reserved{
     color:#F7FF9A;

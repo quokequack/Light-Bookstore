@@ -4,6 +4,7 @@ import '../styles/cadastroLivros.css';
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { firebaseApp } from "../firebase/FirebaseConnection";
 import { useParams } from "react-router-dom";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 
 
@@ -14,7 +15,7 @@ export default function CadastroLivros() {
         document.title = 'Light Bookstore | Cadastre um livro!';
     }, []);
 
-    const {idUsuario} = useParams();
+    const { idUsuario } = useParams();
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -24,6 +25,16 @@ export default function CadastroLivros() {
         const autor = form["livro-autor"].value;
         const genero = form["livro-genero"].value;
         const descricao = form["livro-descricao"].value;
+        const capaLivro = form["livro-capa"].files[0];
+
+        const storage = getStorage(firebaseApp);
+
+        const storageRef = ref(storage, `livros/${capaLivro.name}`);
+
+
+        await uploadBytes(storageRef, capaLivro);
+        const capaUrl = await getDownloadURL(storageRef);
+
 
         const db = getFirestore(firebaseApp);
         const livroCollection = collection(db, "livros");
@@ -33,6 +44,7 @@ export default function CadastroLivros() {
             autor: autor,
             genero: genero,
             descricao: descricao,
+            capaUrl: capaUrl,
         });
 
         form.reset();
@@ -50,6 +62,8 @@ export default function CadastroLivros() {
                         <div className='col-md-6'>
                             <form method='post' onSubmit={handleSubmit}>
                                 <div className='form-group'>
+                                    <label htmlFor="livro-capa">Capa do livro</label>
+                                    <input className="form-control" type="file" name="livro-capa" id="livro-capa"/>
                                     <label htmlFor='livro-nome'>Nome do livro</label>
                                     <input className='form-control' type='text' name='livro-nome' id='livro-nome' />
 
