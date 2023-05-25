@@ -34,7 +34,7 @@ export default function Header() {
                     const usuarioData = usuarioDoc.data();
                     setUsuario(usuarioData);
     
-                    if (usuarioData.nome == 'Admin'){
+                    if (usuarioData.nome === 'Admin'){
                         setEhAdm(true);
                         console.log('Esse usuário é um administrador!')
                     } else {
@@ -65,14 +65,14 @@ export default function Header() {
                                 <li className="nav-item">
                                     <a id='active-nav-item' className="nav-link active" aria-current="page" href={`/home/${idUsuario}`}>Página inicial</a>
                                 </li>
-                                {ehAdm == true &&
+                                {ehAdm === true &&
                                     <>
                                         <li className="nav-item">
-                                            <a className="nav-link" href='/cadastro-livro'>Cadastrar livro</a>
+                                            <a className="nav-link" href={`/cadastro-livro/${idUsuario}`}>Cadastrar livro</a>
                                         </li>
                                     </>
                                 }
-                                {ehAdm == false &&
+                                {ehAdm === false &&
                                     <>
                                         <li className="nav-item">
                                             <a className="nav-link" href={`/meus-reservados/${idUsuario}`}>Meus reservados</a>

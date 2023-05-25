@@ -19,8 +19,8 @@ export default function Rotas() {
                     <Route path='/detalhes/:id/:idUsuario' element={<Detalhe />}/>
                     <Route path='/login' element={<Login />}/>
                     <Route path='/meus-reservados/:idUsuario'  element={<MeusReservados />}/>
-                    <Route path='/cadastro-livro' element={<CadastroLivros />}/>
-                    <Route path='/atualiza-livro/:id' element={<AtualizaLivros />}/>
+                    <Route path='/cadastro-livro/:idUsuario' element={<CadastroLivros />}/>
+                    <Route path='/atualiza-livro/:id/:idUsuario' element={<AtualizaLivros />}/>
             
                 </Routes>
             </BrowserRouter>
