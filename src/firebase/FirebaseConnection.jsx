@@ -5,13 +5,13 @@ import 'firebase/auth';
 import 'firebase/database';
 
 export const firebaseApp = initializeApp({
-    apiKey: "AIzaSyAcFLtSRefVFLxy24K214wOphll862aSPM",
-    authDomain: "bookstore-821a3.firebaseapp.com",
-    projectId: "bookstore-821a3",
-    storageBucket: "bookstore-821a3.appspot.com",
-    messagingSenderId: "480343989976",
-    appId: "1:480343989976:web:9ab180a945454fae2c01ad"
-  
-  });
-  export const storage = getStorage(firebaseApp);
-  export const auth = getAuth(firebaseApp);
+  apiKey: "AIzaSyCPKbG_UPrUZE1MdRnCjt7O3t6-1tLEMr4",
+  authDomain: "light-bookstore.firebaseapp.com",
+  projectId: "light-bookstore",
+  storageBucket: "light-bookstore.appspot.com",
+  messagingSenderId: "752799958501",
+  appId: "1:752799958501:web:292df89fd702ccb9219b0c"
+
+});
+export const storage = getStorage(firebaseApp);
+export const auth = getAuth(firebaseApp);
