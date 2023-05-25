@@ -44,4 +44,4 @@ Link pro LucidChart: https://lucid.app/documents/view/6d040d54-8460-497a-bb97-cb
 ### Wireframe:
 Feito com Figma;
 Link: https://www.figma.com/file/Y17wRkVkCIBpNdXHgvB4vo/bookstore?type=design&node-id=0%3A1&t=71pO7jUeGVK74EgI-1
-![wireframe light bb](https://github.com/quokequack/Light-Bookstore/assets/88796071/65afaf9f-49dc-4d4a-953e-2e36c1885b65)
+![wireframe light bb](https://github.com/quokequack/Light-Bookstore/assets/88796071/dd1efc35-f77c-4a3f-87a9-7e8d1fb80bc6)
